@@ -33,6 +33,7 @@ module.exports = function (grunt) {
             },
             js: {
                 files: ['<%= config.app %>/scripts/es5/{,*/}*.js',
+                        'Gruntfile.js',
                         '!<%= config.app %>/scripts/es5/vendor/*',
                         '!<%= config.app %>/scripts/es5/transpiled/*',],
                 tasks: ['jshint'],
@@ -62,11 +63,11 @@ module.exports = function (grunt) {
                 ]
             },
             traceur: {
-            	files: ['<%= config.app %>/scripts/es6/{,*/}*.js'],
-            	tasks: ['traceur'],
-            	options: {
-            			livereload: true
-            	}
+                files: ['<%= config.app %>/scripts/es6/{,*/}*.js'],
+                tasks: ['traceur'],
+                options: {
+                    livereload: true
+                }
             }
         },
 
