@@ -32,7 +32,9 @@ module.exports = function (grunt) {
                 tasks: ['bowerInstall']
             },
             js: {
-                files: ['<%= config.app %>/scripts/{,*/}*.js'],
+                files: ['<%= config.app %>/scripts/es5/{,*/}*.js',
+                        '!<%= config.app %>/scripts/es5/vendor/*',
+                        '!<%= config.app %>/scripts/es5/transpiled/*',],
                 tasks: ['jshint'],
                 options: {
                     livereload: true
@@ -58,6 +60,13 @@ module.exports = function (grunt) {
                     '.tmp/styles/{,*/}*.css',
                     '<%= config.app %>/images/{,*/}*'
                 ]
+            },
+            traceur: {
+            	files: ['<%= config.app %>/scripts/es6/{,*/}*.js'],
+            	tasks: ['traceur'],
+            	options: {
+            			livereload: true
+            	}
             }
         },
 
@@ -122,6 +131,7 @@ module.exports = function (grunt) {
                 'Gruntfile.js',
                 '<%= config.app %>/scripts/es5/{,*/}*.js',
                 '!<%= config.app %>/scripts/es5/vendor/*',
+                '!<%= config.app %>/scripts/es5/transpiled/*',
                 'test/spec/{,*/}*.js'
             ]
         },
@@ -323,7 +333,7 @@ module.exports = function (grunt) {
             },
             all: {
                 files:{
-                    'app/scripts/es6/out/app.js': ['app/scripts/es6/app.js']
+                    'app/scripts/es5/transpiled/app.js': ['app/scripts/es6/app.js']
                 }
             },
         }
