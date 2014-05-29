@@ -4,7 +4,12 @@
   "dependencies": {
     "modernizr": "~2.6.2",
     "jquery": "~1.11.0",
-    "polymer": "Polymer/polymer#~0.2.4"
+    "platform": "Polymer/platform#master",
+    "polymer": "Polymer/polymer#master"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "resolutions": {
+    "platform": "0.2.4",
+    "core-component-page": "0.2.4"
+  }
 }

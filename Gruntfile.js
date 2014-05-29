@@ -63,7 +63,8 @@ module.exports = function (grunt) {
                 ]
             },
             traceur: {
-                files: ['<%= config.app %>/scripts/es6/{,*/}*.js'],
+                files: ['<%= config.app %>/scripts/es6/{,*/}*.js',
+                        '<%= config.app %>/elements/my-element/script/es6/{,*/}*.js'],
                 tasks: ['traceur'],
                 options: {
                     livereload: true
@@ -334,7 +335,8 @@ module.exports = function (grunt) {
             },
             all: {
                 files:{
-                    'app/scripts/es5/transpiled/app.js': ['app/scripts/es6/app.js']
+                    'app/scripts/es5/transpiled/app.js': ['app/scripts/es6/app.js'],
+                    'app/elements/my-element/script/es5/transpiled/my-element.js' : ['app/elements/my-element/script/es6/my-element.js']
                 }
             },
         }
