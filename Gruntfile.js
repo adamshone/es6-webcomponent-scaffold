@@ -57,14 +57,14 @@ module.exports = function (grunt) {
                     livereload: '<%= connect.options.livereload %>'
                 },
                 files: [
-                    '<%= config.app %>/{,*/}*.html',
+                    '<%= config.app %>/**/*.html',
                     '.tmp/styles/{,*/}*.css',
                     '<%= config.app %>/images/{,*/}*'
                 ]
             },
             traceur: {
                 files: ['<%= config.app %>/scripts/es6/{,*/}*.js',
-                        '<%= config.app %>/elements/my-element/script/es6/{,*/}*.js'],
+                        '<%= config.app %>/elements/**/es6/{,*/}*.js'],
                 tasks: ['traceur'],
                 options: {
                     livereload: true
@@ -132,8 +132,10 @@ module.exports = function (grunt) {
             all: [
                 'Gruntfile.js',
                 '<%= config.app %>/scripts/es5/{,*/}*.js',
+                '<%= config.app %>/elements/**/es5/{,*/}*.js',
                 '!<%= config.app %>/scripts/es5/vendor/*',
                 '!<%= config.app %>/scripts/es5/transpiled/*',
+                '!<%= config.app %>/elements/**/es5/transpiled/*',
                 'test/spec/{,*/}*.js'
             ]
         },
