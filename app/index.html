@@ -26,7 +26,14 @@
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
 
+		<script src="bower_components/emitr/target/single/emitr.js"></script>
+
 		<link rel="import" href="elements/my-element/my-element.html">
+		
+		<script>
+		Window.a = {};
+		emitr.mixInto(Window.a);
+		</script>
     </head>
     <body>
         <!--=[if lt IE 10]>

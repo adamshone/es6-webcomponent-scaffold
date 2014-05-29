@@ -5,11 +5,7 @@
     "modernizr": "~2.6.2",
     "jquery": "~1.11.0",
     "platform": "Polymer/platform#master",
-    "polymer": "Polymer/polymer#master"
+    "emitr": "BladeRunnerJS/emitr#0.0.4"
   },
-  "devDependencies": {},
-  "resolutions": {
-    "platform": "0.2.4",
-    "core-component-page": "0.2.4"
-  }
+  "devDependencies": {}
 }
