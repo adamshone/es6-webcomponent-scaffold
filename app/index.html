@@ -28,29 +28,14 @@
 
 		<script src="bower_components/emitr/target/single/emitr.js"></script>
 
-		<link rel="import" href="elements/my-element/my-element.html">
+		<link rel="import" href="elements/demo-receiver/demo-receiver.html">
+		<link rel="import" href="elements/demo-transmitter/demo-transmitter.html">
 		
-		<script>
-		Window.a = {};
-		emitr.mixInto(Window.a);
-		</script>
     </head>
     <body>
         <!--=[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-
-        <div class="hero-unit">
-          <h1>'Allo, 'Allo!</h1>
-          <p>You now have</p>
-          <ul>
-            <li>HTML5 Boilerplate</li>
-
-            <li>Modernizr</li>
-          </ul>
-        </div>
-
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
@@ -58,21 +43,12 @@
         <!-- endbower -->
         <!-- endbuild -->
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --> <!-- 
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script> -->
-
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/es5/transpiled/app.js"></script>
         <!-- endbuild -->
-        
-        <my-element currencyPair="USDJPY"></my-element>
-        <my-element currencyPair="GBPUSD"></my-element>
+		
+		<div id="header"><h1>ES6 Web Components Demo</h1></div>
+		<div><demo-transmitter /></div>
+        <div><demo-receiver /></div>
 </body>
 </html>

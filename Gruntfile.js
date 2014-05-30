@@ -49,7 +49,8 @@ module.exports = function (grunt) {
                 files: ['Gruntfile.js']
             },
             styles: {
-                files: ['<%= config.app %>/styles/{,*/}*.css'],
+                files: ['<%= config.app %>/styles/{,*/}*.css',
+                        '<%= config.app %>/elements/**/{,*/}*.css'],
                 tasks: ['newer:copy:styles', 'autoprefixer']
             },
             livereload: {
@@ -338,7 +339,8 @@ module.exports = function (grunt) {
             all: {
                 files:{
                     'app/scripts/es5/transpiled/app.js': ['app/scripts/es6/app.js'],
-                    'app/elements/my-element/script/es5/transpiled/my-element.js' : ['app/elements/my-element/script/es6/my-element.js']
+                    'app/elements/demo-receiver/script/es5/transpiled/demo-receiver.js' : ['app/elements/demo-receiver/script/es6/demo-receiver.js'],
+                    'app/elements/demo-transmitter/script/es5/transpiled/demo-transmitter.js' : ['app/elements/demo-transmitter/script/es6/demo-transmitter.js']
                 }
             },
         }

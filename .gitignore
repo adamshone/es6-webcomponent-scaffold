@@ -5,4 +5,5 @@ dist
 app/bower_components
 test/bower_components
 app/scripts/es5/transpiled
-app/elements/my-element/script/es5/transpiled
+app/elements/demo-transmitter/script/es5/transpiled
+app/elements/demo-receiver/script/es5/transpiled

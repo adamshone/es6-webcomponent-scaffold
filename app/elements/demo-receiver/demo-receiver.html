@@ -1,0 +1,18 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../emitr/emitr.html">
+
+<polymer-element name="demo-receiver">
+  <template>
+    <link rel="stylesheet" href="styles/main.css">
+    <div id="content">
+    	<h3>Receiver Web Component</h3>
+    	<template repeat="{{e in receivedEvents}}">
+    		<div>{{e}}</div>
+    	</template>
+    	<template if="{{receivedEvents.length > 0}}">
+    		<button id="clear-button" on-click="{{clear}}">Clear</button>
+    	</template>
+    </div>
+  </template>
+  <script src="script/es5/transpiled/demo-receiver.js"></script>  
+</polymer-element>
