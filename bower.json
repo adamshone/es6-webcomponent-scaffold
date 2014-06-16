@@ -1,10 +1,10 @@
 {
-  "name": "es6playground",
+  "name": "es6-webcomponent-scaffold",
   "private": true,
   "dependencies": {
     "modernizr": "~2.6.2",
     "jquery": "~1.11.0",
-    "platform": "Polymer/platform#master",
+    "polymer": "Polymer/polymer#~0.3.2",
     "emitr": "BladeRunnerJS/emitr#0.0.4"
   },
   "devDependencies": {}
